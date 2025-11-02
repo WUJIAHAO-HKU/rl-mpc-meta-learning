@@ -1,167 +1,167 @@
-# 快速入门指南
+# Quick Start Guide
 
-本指南将帮助您在10分钟内运行第一个实验。
+This guide will help you run your first experiment in 10 minutes.
 
-## 📦 安装（5分钟）
+## 📦 Installation (5 minutes)
 
-### 1. 克隆仓库
+### 1. Clone Repository
 
 ```bash
 git clone https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning.git
 cd rl-mpc-meta-learning
 ```
 
-### 2. 创建虚拟环境（推荐）
+### 2. Create Virtual Environment (Recommended)
 
 ```bash
-# 使用conda
+# Using conda
 conda create -n rl-mpc python=3.9
 conda activate rl-mpc
 
-# 或使用venv
+# Or using venv
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
-# 或 venv\Scripts\activate  # Windows
+# or venv\Scripts\activate  # Windows
 ```
 
-### 3. 安装依赖
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 
-# 或作为开发模式安装（推荐）
+# Or install in development mode (recommended)
 pip install -e .
 ```
 
-## 🚀 运行第一个实验（5分钟）
+## 🚀 Run First Experiment (5 minutes)
 
-### 选项A：使用预训练模型（最快）
+### Option A: Use Pre-trained Models (Fastest)
 
-如果您下载了预训练模型：
+If you've downloaded pre-trained models:
 
 ```bash
-# 1. 将预训练模型放到models/目录
-# 2. 直接评估
+# 1. Place pre-trained models in models/ directory
+# 2. Evaluate directly
 python src/evaluation/evaluate_meta_rl.py \
     --robot franka \
     --model models/pretrained_franka.zip \
     --n_episodes 10
 ```
 
-### 选项B：快速训练示例（约5分钟）
+### Option B: Quick Training Example (approx. 5 minutes)
 
 ```bash
-# 1. 使用小数据集快速训练元学习网络
+# 1. Quick training with small dataset
 python src/training/train_meta_pid.py \
     --epochs 10 \
     --batch_size 32 \
     --quick_test
 
-# 2. 查看结果
-ls models/  # 应该看到 meta_pid_quick.pth
+# 2. Check results
+ls models/  # Should see meta_pid_quick.pth
 ```
 
-### 选项C：完整流程（如果有时间）
+### Option C: Full Workflow (If You Have Time)
 
 ```bash
-# 运行完整复现脚本（约24小时）
+# Run complete reproduction script (approx. 24 hours)
 bash scripts/reproduce_paper_results.sh
 ```
 
-## 📊 验证安装
+## 📊 Verify Installation
 
-运行单元测试确保一切正常：
+Run unit tests to ensure everything works:
 
 ```bash
 python -m pytest tests/ -v
 ```
 
-## 🎯 下一步
+## 🎯 Next Steps
 
-### 1. 理解代码结构
+### 1. Understand Code Structure
 
 ```bash
-# 查看主要组件
+# View main components
 src/
-├── networks/          # 神经网络定义
-├── environments/      # PyBullet仿真环境
-├── training/          # 训练脚本
-├── evaluation/        # 评估脚本
-└── visualization/     # 可视化工具
+├── networks/          # Neural network definitions
+├── environments/      # PyBullet simulation environments
+├── training/          # Training scripts
+├── evaluation/        # Evaluation scripts
+└── visualization/     # Visualization tools
 ```
 
-### 2. 自定义参数
+### 2. Customize Parameters
 
-编辑配置文件：
+Edit configuration files:
 
 ```bash
-# 编辑训练配置
+# Edit training config
 nano configs/training_config.yaml
 
-# 常见修改：
-# - learning_rate: 学习率
-# - batch_size: 批量大小
-# - n_episodes: 训练轮数
+# Common modifications:
+# - learning_rate: Learning rate
+# - batch_size: Batch size
+# - n_episodes: Number of training episodes
 ```
 
-### 3. 可视化结果
+### 3. Visualize Results
 
 ```bash
-# 生成训练曲线
+# Generate training curves
 python src/visualization/visualize_training_curves.py \
     --log logs/training.log \
     --output results/training_curves.png
 
-# 生成所有论文图表
+# Generate all paper figures
 python src/visualization/generate_all_figures_unified.py
 ```
 
-## 🔧 常见问题
+## 🔧 Troubleshooting
 
-### Q1: PyBullet GUI不显示
+### Q1: PyBullet GUI not showing
 
 ```bash
-# 确保安装了GUI依赖（Linux）
+# Install GUI dependencies (Linux)
 sudo apt-get install python3-opengl
 
-# 或在代码中设置
-p.connect(p.GUI)  # 改为 p.connect(p.DIRECT)
+# Or set in code
+p.connect(p.GUI)  # Change to p.connect(p.DIRECT)
 ```
 
-### Q2: CUDA内存不足
+### Q2: CUDA out of memory
 
 ```bash
-# 减小批量大小
+# Reduce batch size
 python train_meta_pid.py --batch_size 16
 
-# 或使用CPU
+# Or use CPU
 python train_meta_pid.py --device cpu
 ```
 
-### Q3: 依赖版本冲突
+### Q3: Dependency version conflicts
 
 ```bash
-# 使用干净的虚拟环境
+# Use clean virtual environment
 conda create -n rl-mpc-clean python=3.9
 conda activate rl-mpc-clean
 pip install -r requirements.txt --no-cache-dir
 ```
 
-## 📚 学习资源
+## 📚 Learning Resources
 
-1. **理解元学习网络**：阅读 `src/networks/meta_pid_network.py`
-2. **理解RL策略**：阅读 `src/networks/rl_policy.py`
-3. **理解仿真环境**：阅读 `src/environments/meta_rl_combined_env.py`
-4. **查看完整文档**：阅读 [README.md](README.md)
+1. **Understand Meta-Learning Network**: Read `src/networks/meta_pid_network.py`
+2. **Understand RL Policy**: Read `src/networks/rl_policy.py`
+3. **Understand Simulation Environment**: Read `src/environments/meta_rl_combined_env.py`
+4. **View Full Documentation**: Read [README.md](README.md)
 
-## 🎓 教程示例
+## 🎓 Tutorial Examples
 
-### 示例1：训练自定义机器人
+### Example 1: Train Custom Robot
 
 ```python
 from src.environments.base_env import BaseRobotEnv
 
-# 定义您的机器人
+# Define your robot
 class MyRobotEnv(BaseRobotEnv):
     def __init__(self):
         super().__init__(
@@ -169,22 +169,22 @@ class MyRobotEnv(BaseRobotEnv):
             n_joints=7
         )
 
-# 训练
-# ... (参考train_meta_rl_combined.py)
+# Train
+# ... (refer to train_meta_rl_combined.py)
 ```
 
-### 示例2：自定义奖励函数
+### Example 2: Custom Reward Function
 
 ```python
 def custom_reward(error, action, prev_error):
-    """您的自定义奖励"""
+    """Your custom reward function"""
     r_track = -np.linalg.norm(error)
     r_smooth = -0.05 * np.linalg.norm(action)
     r_improve = 5.0 * (np.linalg.norm(prev_error) - np.linalg.norm(error))
     return r_track + r_smooth + r_improve
 ```
 
-### 示例3：可视化机器人运动
+### Example 3: Visualize Robot Motion
 
 ```python
 import pybullet as p
@@ -194,31 +194,30 @@ env = MetaRLCombinedEnv(robot='franka', render=True)
 obs, info = env.reset()
 
 for _ in range(1000):
-    action = env.action_space.sample()  # 随机动作
+    action = env.action_space.sample()  # Random action
     obs, reward, done, truncated, info = env.step(action)
     if done:
         break
 ```
 
-## ✅ 检查清单
+## ✅ Checklist
 
-完成以下步骤后，您应该能够：
+After completing these steps, you should be able to:
 
-- [ ] 成功安装所有依赖
-- [ ] 运行测试套件无错误
-- [ ] 训练一个小型元学习模型
-- [ ] 加载和评估模型
-- [ ] 生成基本的可视化结果
+- [ ] Successfully install all dependencies
+- [ ] Run test suite without errors
+- [ ] Train a small meta-learning model
+- [ ] Load and evaluate models
+- [ ] Generate basic visualizations
 
-## 💬 获取帮助
+## 💬 Get Help
 
-- **问题反馈**：提交 [GitHub Issue](https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning/issues)
-- **讨论交流**：加入 [Discussions](https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning/discussions)
-- **邮件联系**：u3661739@connect.hku.hk
+- **Issue Reporting**: Submit [GitHub Issue](https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning/issues)
+- **Discussion**: Join [Discussions](https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning/discussions)
+- **Email Contact**: u3661739@connect.hku.hk
 
 ---
 
-**祝您实验顺利！** 🎉
+**Good luck with your experiments!** 🎉
 
-如果本项目对您有帮助，请给我们一个⭐️
-
+If this project helps you, please give us a ⭐️

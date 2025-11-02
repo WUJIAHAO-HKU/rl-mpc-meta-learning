@@ -13,11 +13,12 @@
 如果您在研究中使用了本代码，请引用我们的论文：
 
 ```bibtex
-@article{yourname2025rl,
-  title={基于强化学习的模型预测控制动力学模型误差在线补偿方法},
-  author={作者姓名等},
-  journal={Robotics and Autonomous Systems},
-  year={2025}
+@article{wu2025rl,
+  title={Reinforcement Learning-Enhanced Model Predictive Control with Meta-Learning for Online Compensation of Dynamic Model Errors},
+  author={Wu, Jiahao and others},
+  journal={To be published},
+  year={2025},
+  note={Manuscript in preparation}
 }
 ```
 
@@ -59,7 +60,7 @@
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/yourusername/rl-mpc-meta-learning.git
+git clone https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning.git
 cd rl-mpc-meta-learning
 
 # 2. 创建虚拟环境（推荐）
@@ -456,10 +457,10 @@ pytest --cov=src tests/
 
 ## 📧 联系方式
 
-- **作者**：[您的姓名]
-- **邮箱**：[your.email@university.edu]
-- **项目主页**：[https://github.com/yourusername/rl-mpc-meta-learning](https://github.com/yourusername/rl-mpc-meta-learning)
-- **问题反馈**：[GitHub Issues](https://github.com/yourusername/rl-mpc-meta-learning/issues)
+- **作者**：WU JIAHAO
+- **邮箱**：u3661739@connect.hku.hk
+- **项目主页**：[https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning](https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning)
+- **问题反馈**：[GitHub Issues](https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning/issues)
 
 ## 🙏 致谢
 
