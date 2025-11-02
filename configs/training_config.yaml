@@ -1,0 +1,137 @@
+# 训练配置文件示例
+# 可以根据您的硬件和需求调整这些参数
+
+# 元学习网络训练配置
+meta_learning:
+  epochs: 100
+  batch_size: 32
+  learning_rate: 0.001
+  optimizer: adam
+  weight_decay: 1e-5
+  
+  # 网络架构
+  hidden_dim: 64
+  num_layers: 3
+  activation: relu
+  
+  # 数据增强
+  use_augmentation: true
+  augmentation_ratio: 10  # 每个真实样本生成10个虚拟样本
+  noise_level: 0.05
+
+# RL训练配置
+reinforcement_learning:
+  # 算法选择: PPO, SAC, TD3
+  algorithm: PPO
+  
+  # 训练步数
+  total_timesteps: 1000000
+  
+  # PPO参数
+  ppo:
+    learning_rate: 3e-4
+    n_steps: 2048
+    batch_size: 64
+    n_epochs: 10
+    gamma: 0.99
+    gae_lambda: 0.95
+    clip_range: 0.2
+    ent_coef: 0.01
+    vf_coef: 0.5
+    max_grad_norm: 0.5
+  
+  # SAC参数（备用）
+  sac:
+    learning_rate: 3e-4
+    buffer_size: 1000000
+    learning_starts: 10000
+    batch_size: 256
+    tau: 0.005
+    gamma: 0.99
+    train_freq: 1
+    gradient_steps: 1
+  
+  # 网络架构
+  policy_network:
+    hidden_layers: [256, 128]
+    activation: relu
+  
+  value_network:
+    hidden_layers: [256, 128]
+    activation: relu
+
+# 机器人平台配置
+robots:
+  franka:
+    urdf_path: "robots/franka_panda/panda.urdf"
+    n_joints: 9
+    max_torque: 87.0
+    control_freq: 240  # Hz
+    
+  laikago:
+    urdf_path: "robots/laikago/laikago.urdf"
+    n_joints: 12
+    max_torque: 33.5
+    control_freq: 240  # Hz
+
+# 仿真环境配置
+simulation:
+  use_gui: false  # 训练时通常关闭GUI以加速
+  time_step: 0.001  # 1ms
+  max_episode_steps: 1000
+  
+  # 轨迹设置
+  trajectory_type: quintic  # quintic, cubic, sine
+  trajectory_duration: 5.0  # 秒
+  
+  # 扰动设置
+  disturbance:
+    enabled: false  # 训练时可选，评估时开启
+    force_range: [0, 30]  # N
+    torque_range: [0, 5]  # Nm
+    probability: 0.1  # 10%概率施加扰动
+
+# 奖励函数配置
+reward:
+  # 权重系数
+  tracking_weight: 1.0
+  smoothness_weight: 0.1
+  improvement_weight: 10.0
+  
+  # 惩罚项
+  max_error_penalty: -100
+  joint_limit_penalty: -50
+
+# 评估配置
+evaluation:
+  n_episodes: 100
+  save_trajectory: true
+  save_video: false  # 设为true会大幅增加评估时间
+  metrics:
+    - mae
+    - rmse
+    - max_error
+    - std_dev
+
+# 日志和保存
+logging:
+  tensorboard: true
+  log_dir: "logs/"
+  save_freq: 10000  # 每10k步保存一次
+  eval_freq: 50000  # 每50k步评估一次
+  
+# 硬件配置
+hardware:
+  device: auto  # auto, cpu, cuda
+  num_workers: 4  # 数据加载的工作进程数
+  pin_memory: true  # 如果使用GPU，建议开启
+
+# 随机种子（用于复现）
+seed: 42
+
+# 调试选项
+debug:
+  verbose: 1  # 0: 静默, 1: 信息, 2: 调试
+  check_gradients: false
+  profile: false
+

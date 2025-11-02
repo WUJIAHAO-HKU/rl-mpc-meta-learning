@@ -1,0 +1,296 @@
+{
+  "search_results": {
+    "none": {
+      "params": {},
+      "improvement": 13.22250701595663,
+      "pure_error": 28.66644131560768,
+      "rl_error": 24.876019101426365
+    },
+    "random_force": {
+      "params": {
+        "random_force": {
+          "force_range": 15.0,
+          "force_prob": 0.05
+        },
+        "payload": {
+          "mass_range": 3.0
+        },
+        "param_uncertainty": {
+          "mass_scale": [
+            0.8,
+            1.2
+          ],
+          "friction_scale": [
+            0.5,
+            2.0
+          ]
+        }
+      },
+      "improvement": 4.672739615303928,
+      "pure_error": 26.262230299000336,
+      "rl_error": 25.035064659956596
+    },
+    "payload": {
+      "params": {
+        "payload": {
+          "mass_range": 2.0
+        },
+        "random_force": {
+          "force_range": 20.0,
+          "force_prob": 0.1
+        },
+        "param_uncertainty": {
+          "mass_scale": [
+            0.8,
+            1.2
+          ],
+          "friction_scale": [
+            0.5,
+            2.0
+          ]
+        }
+      },
+      "improvement": 41.42647206860271,
+      "pure_error": 42.26117554374294,
+      "rl_error": 24.75386146125111
+    },
+    "param_uncertainty": {
+      "params": {
+        "param_uncertainty": {
+          "mass_scale": [
+            0.7,
+            1.3
+          ],
+          "friction_scale": [
+            0.7,
+            1.5
+          ]
+        },
+        "random_force": {
+          "force_range": 20.0,
+          "force_prob": 0.1
+        },
+        "payload": {
+          "mass_range": 3.0
+        }
+      },
+      "improvement": 23.256550025487833,
+      "pure_error": 33.451029307511,
+      "rl_error": 25.671473942569108
+    },
+    "mixed": {
+      "params": {
+        "payload": {
+          "mass_range": 4.0
+        },
+        "param_uncertainty": {
+          "mass_scale": [
+            0.9,
+            1.1
+          ],
+          "friction_scale": [
+            0.7,
+            1.5
+          ]
+        },
+        "random_force": {
+          "force_range": 20.0,
+          "force_prob": 0.1
+        }
+      },
+      "improvement": 35.1093170123515,
+      "pure_error": 52.854612763486095,
+      "rl_error": 34.297719212702965
+    }
+  },
+  "final_test_results": {
+    "pure": {
+      "none": {
+        "mean_error_deg": 28.66644131560768,
+        "params": {}
+      },
+      "random_force": {
+        "mean_error_deg": 25.44646509705602,
+        "params": {
+          "random_force": {
+            "force_range": 15.0,
+            "force_prob": 0.05
+          },
+          "payload": {
+            "mass_range": 3.0
+          },
+          "param_uncertainty": {
+            "mass_scale": [
+              0.8,
+              1.2
+            ],
+            "friction_scale": [
+              0.5,
+              2.0
+            ]
+          }
+        }
+      },
+      "payload": {
+        "mean_error_deg": 66.78910476540462,
+        "params": {
+          "payload": {
+            "mass_range": 2.0
+          },
+          "random_force": {
+            "force_range": 20.0,
+            "force_prob": 0.1
+          },
+          "param_uncertainty": {
+            "mass_scale": [
+              0.8,
+              1.2
+            ],
+            "friction_scale": [
+              0.5,
+              2.0
+            ]
+          }
+        }
+      },
+      "param_uncertainty": {
+        "mean_error_deg": 27.214457206694508,
+        "params": {
+          "param_uncertainty": {
+            "mass_scale": [
+              0.7,
+              1.3
+            ],
+            "friction_scale": [
+              0.7,
+              1.5
+            ]
+          },
+          "random_force": {
+            "force_range": 20.0,
+            "force_prob": 0.1
+          },
+          "payload": {
+            "mass_range": 3.0
+          }
+        }
+      },
+      "mixed": {
+        "mean_error_deg": 83.53645542698075,
+        "params": {
+          "payload": {
+            "mass_range": 4.0
+          },
+          "param_uncertainty": {
+            "mass_scale": [
+              0.9,
+              1.1
+            ],
+            "friction_scale": [
+              0.7,
+              1.5
+            ]
+          },
+          "random_force": {
+            "force_range": 20.0,
+            "force_prob": 0.1
+          }
+        }
+      }
+    },
+    "rl": {
+      "none": {
+        "mean_error_deg": 24.87601910142637,
+        "params": {}
+      },
+      "random_force": {
+        "mean_error_deg": 24.970034805262625,
+        "params": {
+          "random_force": {
+            "force_range": 15.0,
+            "force_prob": 0.05
+          },
+          "payload": {
+            "mass_range": 3.0
+          },
+          "param_uncertainty": {
+            "mass_scale": [
+              0.8,
+              1.2
+            ],
+            "friction_scale": [
+              0.5,
+              2.0
+            ]
+          }
+        }
+      },
+      "payload": {
+        "mean_error_deg": 66.51578342742317,
+        "params": {
+          "payload": {
+            "mass_range": 2.0
+          },
+          "random_force": {
+            "force_range": 20.0,
+            "force_prob": 0.1
+          },
+          "param_uncertainty": {
+            "mass_scale": [
+              0.8,
+              1.2
+            ],
+            "friction_scale": [
+              0.5,
+              2.0
+            ]
+          }
+        }
+      },
+      "param_uncertainty": {
+        "mean_error_deg": 27.026385292277283,
+        "params": {
+          "param_uncertainty": {
+            "mass_scale": [
+              0.7,
+              1.3
+            ],
+            "friction_scale": [
+              0.7,
+              1.5
+            ]
+          },
+          "random_force": {
+            "force_range": 20.0,
+            "force_prob": 0.1
+          },
+          "payload": {
+            "mass_range": 3.0
+          }
+        }
+      },
+      "mixed": {
+        "mean_error_deg": 81.31841038318618,
+        "params": {
+          "payload": {
+            "mass_range": 4.0
+          },
+          "param_uncertainty": {
+            "mass_scale": [
+              0.9,
+              1.1
+            ],
+            "friction_scale": [
+              0.7,
+              1.5
+            ]
+          },
+          "random_force": {
+            "force_range": 20.0,
+            "force_prob": 0.1
+          }
+        }
+      }
+    }
+  }
+}
