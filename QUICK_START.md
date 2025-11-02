@@ -7,7 +7,7 @@
 ### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/yourusername/rl-mpc-meta-learning.git
+git clone https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning.git
 cd rl-mpc-meta-learning
 ```
 
@@ -212,9 +212,9 @@ for _ in range(1000):
 
 ## 💬 获取帮助
 
-- **问题反馈**：提交 [GitHub Issue](https://github.com/yourusername/rl-mpc-meta-learning/issues)
-- **讨论交流**：加入 [Discussions](https://github.com/yourusername/rl-mpc-meta-learning/discussions)
-- **邮件联系**：your.email@university.edu
+- **问题反馈**：提交 [GitHub Issue](https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning/issues)
+- **讨论交流**：加入 [Discussions](https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning/discussions)
+- **邮件联系**：u3661739@connect.hku.hk
 
 ---
 

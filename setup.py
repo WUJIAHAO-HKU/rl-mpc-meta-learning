@@ -9,12 +9,12 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 setup(
     name="rl-mpc-meta-learning",
     version="1.0.0",
-    author="Your Name",
-    author_email="your.email@university.edu",
+    author="WU JIAHAO",
+    author_email="u3661739@connect.hku.hk",
     description="RL-Enhanced Model Predictive Control with Meta-Learning",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/rl-mpc-meta-learning",
+    url="https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     classifiers=[

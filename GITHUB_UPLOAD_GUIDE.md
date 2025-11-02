@@ -28,7 +28,7 @@ brew install git
 
 ```bash
 # 设置您的用户名和邮箱
-git config --global user.name "Your Name"
+git config --global user.name "WU JIAHAO"
 git config --global user.email "your.email@example.com"
 
 # 验证配置

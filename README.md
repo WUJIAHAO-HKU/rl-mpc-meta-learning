@@ -11,11 +11,12 @@
 如果您在研究中使用了本代码，请引用我们的论文：
 
 ```bibtex
-@article{yourname2025rl,
+@article{wu2025rl,
   title={Reinforcement Learning-Enhanced Model Predictive Control with Meta-Learning for Online Compensation of Dynamic Model Errors},
-  author={Your Name et al.},
-  journal={Robotics and Autonomous Systems},
-  year={2025}
+  author={Wu, Jiahao and others},
+  journal={To be published},
+  year={2025},
+  note={Manuscript in preparation}
 }
 ```
 
@@ -48,7 +49,7 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/yourusername/rl-mpc-meta-learning.git
+git clone https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning.git
 cd rl-mpc-meta-learning
 
 # 安装依赖
@@ -283,9 +284,9 @@ python generate_all_figures_unified.py
 
 ## 📧 联系方式
 
-- 作者：[Your Name]
-- 邮箱：[your.email@university.edu]
-- 项目主页：[https://github.com/yourusername/rl-mpc-meta-learning](https://github.com/yourusername/rl-mpc-meta-learning)
+- 作者：[WU JIAHAO]
+- 邮箱：[u3661739@connect.hku.hk]
+- 项目主页：[https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning](https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning)
 
 ## 🙏 致谢
 

@@ -168,21 +168,21 @@ tests/.gitkeep       # For unit tests
 
 Before uploading, optionally customize these placeholders:
 
-- [ ] Replace `Your Name` with your actual name
-- [ ] Replace `your.email@university.edu` with your email
-- [ ] Replace `yourusername` with your GitHub username
+- [ ] Replace `WU JIAHAO` with your actual name
+- [ ] Replace `u3661739@connect.hku.hk` with your email
+- [ ] Replace `WUJIAHAO-HKU` with your GitHub username
 
 **Quick batch replace** (optional):
 
 ```bash
 # Replace author name
-find . -type f \( -name "*.md" -o -name "*.py" \) -exec sed -i 's/Your Name/Zhang San/g' {} +
+find . -type f \( -name "*.md" -o -name "*.py" \) -exec sed -i 's/WU JIAHAO/Zhang San/g' {} +
 
 # Replace email
 find . -type f \( -name "*.md" -o -name "*.py" \) -exec sed -i 's/your\.email@university\.edu/zhangsan@university.edu/g' {} +
 
 # Replace GitHub username
-find . -type f -name "*.md" -exec sed -i 's/yourusername/zhangsan123/g' {} +
+find . -type f -name "*.md" -exec sed -i 's/WUJIAHAO-HKU/zhangsan123/g' {} +
 ```
 
 ---

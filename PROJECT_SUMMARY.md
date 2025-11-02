@@ -182,20 +182,20 @@ The source code and trained models are publicly available at:
 
 1. **README.md 和 README_CN.md**：
    ```markdown
-   - 作者：[Your Name] → 您的姓名
-   - 邮箱：[your.email@university.edu] → 您的邮箱
-   - GitHub: yourusername → 您的GitHub用户名
+   - 作者：[WU JIAHAO] → 您的姓名
+   - 邮箱：[u3661739@connect.hku.hk] → 您的邮箱
+   - GitHub: WUJIAHAO-HKU → 您的GitHub用户名
    ```
 
 2. **setup.py**：
    ```python
-   author="Your Name",
-   author_email="your.email@university.edu",
+   author="WU JIAHAO",
+   author_email="u3661739@connect.hku.hk",
    ```
 
 3. **LICENSE**：
    ```
-   Copyright (c) 2025 [Your Name]
+   Copyright (c) 2025 [WU JIAHAO]
    ```
 
 ### 添加预训练模型
