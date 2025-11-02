@@ -113,7 +113,7 @@ python visualize_training_curves.py --log training_log.txt
 | Metric | Meta-PID | Meta-PID+RL | Improvement |
 |------|----------|-------------|--------|
 | MAE (°) | 5.91 | **5.91** | 0.0% |
-| RMSE (°) | 13.80 | **13.74** | +0.4% |
+| RMSE (°) | 29.70 | **29.29** | +1.4% |
 
 *Note: The 0.0% MAE improvement for Laikago reflects the "optimization ceiling effect" — when the meta-learning baseline is already near-optimal, RL's marginal gains are limited.*
 
