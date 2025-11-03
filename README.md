@@ -20,6 +20,31 @@ If you use this code in your research, please cite our paper:
 }
 ```
 
+## ⚠️ Publication Status
+
+**This repository contains research currently under peer review at Robotics and Autonomous Systems.**
+
+- **First Upload:** November 3, 2025
+- **Manuscript Status:** Under review
+- **Repository Purpose:** Reference implementation and quick start guide
+
+**Important Notice:**
+- This code demonstrates the core methodology and provides example configurations
+- Complete experimental setup details, optimized hyperparameters, and full training datasets will be released upon paper acceptance
+- Any use of these methods or code should appropriately acknowledge this source
+
+**Citation Requirement:**
+If you use this code or reference this work, please cite:
+
+```
+Wu, J., et al. (2025). Reinforcement Learning-Enhanced Model Predictive Control 
+with Meta-Learning for Online Compensation of Dynamic Model Errors. 
+Manuscript submitted to Robotics and Autonomous Systems. 
+GitHub repository: https://github.com/WUJIAHAO-HKU/rl-mpc-meta-learning
+```
+
+For questions about implementation details, please contact: u3661739@connect.hku.hk
+
 ## 🌟 Key Features
 
 - **Meta-Learning Network**: Fast adaptive PID parameter prediction
