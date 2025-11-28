@@ -9,6 +9,7 @@ Official implementation of "Reinforcement Learning-Enhanced Model Predictive Con
 ## 📖 Citation
 
 **This project was jointly completed by JIAHAO WU and SHENGWEN YU.** 
+
 If you use this code in your research, please cite our paper:
 
 ```bibtex
