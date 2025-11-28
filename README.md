@@ -1,4 +1,4 @@
-# RL-Enhanced Model Predictive Control with Meta-Learning
+# Adaptive PID Control for Robotic Systems via Hierarchical Meta-Learning and Reinforcement Learning with Physics-Based Data Augmentation
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
@@ -8,12 +8,13 @@ Official implementation of "Reinforcement Learning-Enhanced Model Predictive Con
 
 ## 📖 Citation
 
+**This project was jointly completed by JIAHAO WU and SHENGWEN YU.** 
 If you use this code in your research, please cite our paper:
 
 ```bibtex
 @article{wu2025rl,
   title={Reinforcement Learning-Enhanced Model Predictive Control with Meta-Learning for Online Compensation of Dynamic Model Errors},
-  author={Wu, Jiahao and others},
+  author={Wu, Jiahao and Yu ShengWen},
   journal={To be published},
   year={2025},
   note={Manuscript in preparation}
@@ -27,7 +28,7 @@ If you use this code in your research, please cite our paper:
 - **First Upload:** November 3, 2025
 - **Manuscript Status:** Under review
 - **Repository Purpose:** Reference implementation and quick start guide
-
+Besides, the paper has been preprinted in **arXiv**, you can see it in link [arXiv:2511.06500](https://arxiv.org/abs/2511.06500)
 **Important Notice:**
 - This code demonstrates the core methodology and provides example configurations
 - Complete experimental setup details, optimized hyperparameters, and full training datasets will be released upon paper acceptance
